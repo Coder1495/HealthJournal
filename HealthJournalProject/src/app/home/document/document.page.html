@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-toolbar><br>
+        <ion-row row-1>
+            <ion-icon name="arrow-back-circle-outline" size="large" (click)="backbtn()"
+                      style="padding-left: 20px;"></ion-icon>
+            <ion-title style="text-align: center;">
+                Daily Journal
+            </ion-title>
+        </ion-row>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+    <div class="raitng">
+        <ion-label>
+            Type your today's summary (food, exercises, entertaintments, medications, family/friends visit, events,
+            others)
+        </ion-label>
+    </div>
+    <div>
+        <ion-card>
+            <ion-card-content>
+                <ion-textarea
+                        [(ngModel)]="summary"
+                        rows="8"
+                        auto-grow="true"
+                        autocapitalize="string"
+                        enterkeyhint='breakfast'
+                        placeholder="Type your summary..."
+                        required="true"
+                        spellcheck="true"
+                        autofocus="true"
+                        style="color: black;"></ion-textarea>
+            </ion-card-content>
+        </ion-card>
+        <div class="submit">
+            <ion-button (click)="submit()">Submit</ion-button>
+        </div>
+    </div>
+</ion-content>

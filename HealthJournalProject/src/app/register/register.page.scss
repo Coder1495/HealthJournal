@@ -1,0 +1,35 @@
+ion-content {
+  --background: url('../../assets/login_background.png') 0 0/100% 100% no-repeat;
+}
+
+.appName {
+  display: grid;
+  position: auto;
+  justify-items: center;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  margin-top: 30px;
+}
+
+.over {
+  display: grid;
+  position: auto;
+  justify-items: center;
+  margin-top: 10px;
+}
+
+.input {
+  background-color: darken($color: #302c2c11, $amount: 0);
+  width: 220px;
+  border-radius: 50px;
+  color: black;
+}
+
+ion-button {
+  border-radius: 5px;
+  height: 35px;
+}
+
+.newAcc {
+  color: rgb(0, 89, 255);
+}

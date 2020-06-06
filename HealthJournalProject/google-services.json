@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "824446404669",
+    "firebase_url": "https://healthcare-cda23.firebaseio.com",
+    "project_id": "healthcare-cda23",
+    "storage_bucket": "healthcare-cda23.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824446404669:android:84bdf30a65a24aad3b4254",
+        "android_client_info": {
+          "package_name": "com.healthjournal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "824446404669-auqh2nlplfqoeeo40l2poipaksiaqupb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKIRr7-TjQhA4BjUFJy6Z9iQI-dMVM8x4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "824446404669-auqh2nlplfqoeeo40l2poipaksiaqupb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

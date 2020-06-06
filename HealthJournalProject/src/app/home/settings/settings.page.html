@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+    <ion-toolbar><br>
+        <ion-row row-1>
+            <ion-title style="text-align: center;">
+                Settings
+            </ion-title>
+            <ion-icon name="log-out-outline" class="btn" size="large"
+                      style="padding-right: 20px;" (click)="logOut()"></ion-icon>
+        </ion-row>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <div *ngIf="Profile">
+        <ion-list-header>
+            <ion-title>Profile</ion-title>
+        </ion-list-header>
+        <ion-list style="background-color: transparent; margin-left: 5em;">
+            <ion-label>Full Name: {{(Profile |async)?.fullName}}</ion-label>
+            <br><br>
+
+            <ion-label>Nick Name: {{(Profile |async)?.nickName}}</ion-label>
+            <br><br>
+
+            <ion-label>Gender: {{(Profile |async)?.gender}}</ion-label>
+            <br><br>
+
+            <ion-label>ZipCode: {{(Profile |async)?.zipCode}}</ion-label>
+            <br><br>
+
+            <ion-label>Patient: {{(Profile |async)?.patient}}</ion-label>
+            <br><br>
+
+            <ion-label>City: {{(Profile |async)?.city}}</ion-label>
+            <br><br>
+        </ion-list>
+    </div>
+</ion-content>
+
+<ion-footer style="text-align: center;">
+    <a style="color: royalblue;" (click)="reload()">Refresh </a>after edit your profile
+    <br>
+    <ion-button expand="full" [routerLink]="['/profile', uid]">Edit profile</ion-button>
+</ion-footer>

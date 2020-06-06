@@ -1,0 +1,207 @@
+<ion-header>
+    <ion-toolbar><br><br>
+        <ion-title style="text-align: center;">
+            Wellbeing Questions<br>
+            (In last 24 Hrs.)
+        </ion-title>
+        <ion-icon class="next" slot="end" name="arrow-forward-circle-outline" (click)="goNextPage([])" size="large"
+                  style="padding-right: 20px; padding-top: 25px;"></ion-icon>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding #content *ngIf="profile === 'cardiovascular'" [fullscreen]="true">
+    <ion-list>
+        <ion-grid class="questions">
+            <div style="background-color:rgba(172, 194, 202, 0.5);">
+                <div>
+                    <p>Do you have Pain today?</p>
+                </div>
+                <div style="padding-left: 10px;">
+                    <app-rating #question1 (OnSelectRating)="cardi.painChange($event)"
+                                [isDisabled]="cardi.painDisable"></app-rating>
+                </div>
+            </div>
+
+            <div style="background-color:rgb(240, 247, 240);">
+                <div>
+                    <p>Do you have Shortness of Breath?</p>
+                </div>
+                <div style="padding-left: 10px;">
+                    <app-rating #question2 (OnSelectRating)="cardi.breathChange($event)"
+                                [isDisabled]="cardi.breathDisable"></app-rating>
+                </div>
+            </div>
+
+            <div style="background-color:rgba(172, 194, 202, 0.5);">
+                <div>
+                    <p>Do you Sweat you Legs?</p>
+                </div>
+                <div style="padding-left: 10px;">
+                    <app-rating #question3 (OnSelectRating)="cardi.legsChange($event)"
+                                [isDisabled]="cardi.legsDisable"></app-rating>
+                </div>
+            </div>
+
+            <div style="background-color:rgb(240, 247, 240);">
+                <div>
+                    <p>Do you have Cough?</p>
+                </div>
+                <div style="padding-left: 10px;">
+                    <app-rating #question4 (OnSelectRating)="cardi.coughChange($event)"
+                                [isDisabled]="cardi.coughDisable"></app-rating>
+                </div>
+            </div>
+
+            <div style="background-color:rgba(172, 194, 202, 0.5);">
+                <div>
+                    <p>Do you feel Hoarseness?</p>
+                </div>
+                <div style="padding-left: 10px;">
+                    <app-rating #question5 (OnSelectRating)="cardi.hoarsenessChange($event)"
+                                [isDisabled]="cardi.hoarsenessDisable"></app-rating>
+                </div>
+            </div>
+
+            <div style="background-color:rgb(240, 247, 240);">
+                <div>
+                    <p>Do you feel Fatigue?</p>
+                </div>
+                <div style="padding-left: 10px;">
+                    <app-rating #question6 (OnSelectRating)="cardi.fatiqueChange($event)"
+                                [isDisabled]="cardi.fatiqueDisable"></app-rating>
+                </div>
+            </div>
+
+            <div style="background-color:rgba(172, 194, 202, 0.5);">
+                <div>
+                    <p>Do you have Unexplained loss of Appetite/Weight?</p>
+                </div>
+                <div style="padding-left: 10px;">
+                    <app-rating #question7 (OnSelectRating)="cardi.weightChange($event)"
+                                [isDisabled]="cardi.weightDisable"></app-rating>
+                </div>
+            </div>
+        </ion-grid>
+    </ion-list>
+    <div class="submit ion-text-center">
+        <ion-button (click)="goNextPage([question1,question2,question3,question4,question5,question6,question7])">
+            Submit
+        </ion-button>
+    </div>
+</ion-content>
+
+
+<ion-content padding #content *ngIf="profile === 'cancer'" [fullscreen]="true">
+    <div>
+        <ion-grid class="questions">
+            <div style="background-color:rgba(172, 194, 202, 0.5);">
+                <div>
+                    <p>Pain</p>
+                </div>
+                <div style="padding-left: 10px;">
+                    <app-rating #question8 (OnSelectRating)="canc.painChange($event)"
+                                [isDisabled]="canc.painDisable"></app-rating>
+                </div>
+            </div>
+
+            <div style="background-color:rgb(240, 247, 240);">
+                <div>
+                    <p>Nausea / Vomiting / Diarrhea</p>
+                </div>
+                <div style="padding-left: 10px;">
+                    <app-rating #question9 (OnSelectRating)="canc.stomachProblemChange($event)"
+                                [isDisabled]="canc.stomachDisable"></app-rating>
+                </div>
+            </div>
+
+            <div style="background-color:rgba(172, 194, 202, 0.5);">
+                <div>
+                    <p>Dry mouth or lips</p>
+                </div>
+                <div style="padding-left: 10px;">
+                    <app-rating #question10 (OnSelectRating)="canc.dryMouthChange($event)"
+                                [isDisabled]="canc.dryMouthDisable"></app-rating>
+                </div>
+            </div>
+
+            <div style="background-color:rgb(240, 247, 240);">
+                <div>
+                    <p>Skin sensitivity including itchiness</p>
+                </div>
+                <div style="padding-left: 10px;">
+                    <app-rating #question11 (OnSelectRating)="canc.skinSensitivityChange($event)"
+                                [isDisabled]="canc.skinSensitivityDisable"></app-rating>
+                </div>
+            </div>
+
+            <div style="background-color:rgba(172, 194, 202, 0.5);">
+                <div>
+                    <p>Neuropathy (i.e. numbness)</p>
+                </div>
+                <div style="padding-left: 10px;">
+                    <app-rating #question12 (OnSelectRating)="canc.neuropathyChange($event)"
+                                [isDisabled]="canc.neuropathyDisable"></app-rating>
+                </div>
+            </div>
+
+            <div style="background-color:rgb(240, 247, 240);">
+                <div>
+                    <p>Tiredness / Fatigue</p>
+                </div>
+                <div style="padding-left: 10px;">
+                    <app-rating #question13 (OnSelectRating)="canc.tirednessChange($event)"
+                                [isDisabled]="canc.tirednessDisable"></app-rating>
+                </div>
+
+            </div>
+
+            <div style="background-color:rgba(172, 194, 202, 0.5);">
+                <div>
+                    <p>Swelling / Fluid retention</p>
+                </div>
+                <div style="padding-left: 10px;">
+                    <app-rating #question14 (OnSelectRating)="canc.swellingChange($event)"
+                                [isDisabled]="canc.swellingDisable"></app-rating>
+                </div>
+            </div>
+
+            <div style="background-color:rgb(240, 247, 240);">
+                <div>
+                    <p>Bladder control issues</p>
+                </div>
+                <div style="padding-left: 10px;">
+                    <app-rating #question15 (OnSelectRating)="canc.bladderControlIssuesChange($event)"
+                                [isDisabled]="canc.bladderControlIssuesDisable"></app-rating>
+                </div>
+
+            </div>
+
+            <div style="background-color:rgba(172, 194, 202, 0.5);">
+                <div>
+                    <p>Unintentional weight gain / loss</p>
+                </div>
+                <div style="padding-left: 10px;">
+                    <app-rating #question16 (OnSelectRating)="canc.unintentionalWeightChange($event)"
+                                [isDisabled]="canc.unintentionalWeightDisbale"></app-rating>
+                </div>
+            </div>
+
+            <div style="background-color:rgb(240, 247, 240);">
+                <div>
+                    <p>Night sweats / hot flashes</p>
+                </div>
+                <div style="padding-left: 10px;">
+                    <app-rating #question17 (OnSelectRating)="canc.nightSweatsFlashesChange($event)"
+                                [isDisabled]="canc.nightSweatsFlashesDisable"></app-rating>
+                </div>
+            </div>
+        </ion-grid>
+    </div>
+    <div class="submit ion-text-center">
+        <ion-button
+                (click)="goNextPage([question8,question9,question10,question11,question12,question13,question14,question15,question16,question17])">
+            Submit
+        </ion-button>
+    </div>
+</ion-content>

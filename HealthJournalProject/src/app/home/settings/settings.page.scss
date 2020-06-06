@@ -1,0 +1,23 @@
+ion-toolbar {
+  --background: rgb(17, 100, 79); // url(../../../assets/background.jpg) 0 0/100% 100% no-repeat;
+  color: white;
+  height: 90px;
+
+  .btn {
+    position: auto;
+    float: right;
+  }
+}
+
+ion-content {
+  --background: white; //url(../../../assets/background.jpg) 0 0/100% 100% no-repeat;
+
+}
+
+ion-list-header {
+  text-align: center;
+
+  ion-title {
+    font-size: x-large;
+  }
+}

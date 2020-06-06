@@ -1,0 +1,65 @@
+<ion-header>
+    <ion-toolbar><br>
+        <ion-row row-1>
+            <ion-icon name="arrow-back-circle-outline" size="large" (click)="backbtn()"
+                      style="padding-left: 20px;"></ion-icon>
+            <ion-title style="text-align: center;">
+                Health Journal Chat
+            </ion-title>
+        </ion-row>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-grid *ngFor="let chat of chats" no-lines>
+            <div *ngIf="chat.type!=='join'&& chat.type!=='exit'">
+                <ion-row *ngIf="chat.user === nickName">
+                    <ion-col size="9">
+                        <div class="chat-message">
+                            <div class="right-bubble">
+                                <p text-wrap>{{chat.message}}</p>
+                            </div>
+                        </div>
+                    </ion-col>
+                    <ion-col size="3">
+                        <ion-list>
+                            <ion-item text-right><small>Me<br>{{chat.sendDate | date:'short'}}</small></ion-item>&nbsp;
+                        </ion-list>
+                    </ion-col>
+
+                </ion-row>
+                <ion-row *ngIf="chat.user !== nickName">
+                    <ion-col size="3">
+                        <ion-list>
+                            <ion-item text-right><small>{{chat.user}}<br>{{chat.sendDate | date:'short'}}</small>
+                            </ion-item>&nbsp;
+                        </ion-list>
+                    </ion-col>
+                    <ion-col style="padding-left: 30px;" size="9">
+                        <div class="chat-message">
+                            <div class="left-bubble">
+                                <p text-wrap>{{chat.message}}</p>
+                            </div>
+                        </div>
+                    </ion-col>
+
+                </ion-row>
+            </div>
+        </ion-grid>
+    </ion-list>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar color="light">
+        <ion-row align-items-center no-padding>
+        <textarea autosize maxRows="5" auto-grow="true"
+                  [(ngModel)]="data.message" class="msg-input"></textarea>
+            &nbsp;&nbsp;
+            <ion-fab-button fill="clear" color="rgba(255, 0, 0, 0)" style="color: rgba(255, 0, 0, 0);"
+                            [disabled]="data.message === ''" (click)="sendMessage()">
+                <ion-icon name="paper-plane"></ion-icon>
+            </ion-fab-button>
+        </ion-row>
+    </ion-toolbar>
+</ion-footer>

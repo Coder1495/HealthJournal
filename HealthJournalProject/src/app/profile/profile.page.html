@@ -1,0 +1,78 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-row size="1">
+            <ion-buttons>
+                <ion-button *ngIf="profile" (click)="back()" icononly="true">
+                    <ion-icon name="return-down-back"></ion-icon>
+                </ion-button>
+            </ion-buttons>
+            <ion-title style="text-align: center;">Setup Profile</ion-title>
+        </ion-row>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-grid class="grid">
+        <div>
+            <ion-card-content class="input">
+                <ion-list>
+                    <ion-item>
+                        <ion-label floating>Full Name:</ion-label>
+                        <ion-input type="text" autocapitalize="on" required="true"
+                                   [(ngModel)]="profile.fullName"></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label floating>Nick Name:</ion-label>
+                        <ion-input required="true" [(ngModel)]="profile.nickName"></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label floating>Gender:</ion-label>
+                        <ion-select required="true" [(ngModel)]="profile.gender">
+                            <ion-select-option value="Male">Male</ion-select-option>
+                            <ion-select-option value="Female">Female</ion-select-option>
+                        </ion-select>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label floating>Zipcode:</ion-label>
+                        <ion-input [placeholder]="profile.zipCode" type="string" required="true"
+                                   [(ngModel)]="profile.zipCode"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label floating>Disease:</ion-label>
+                        <ion-select class="input" required="true" [(ngModel)]="profile.patient">
+                            <ion-select-option class="input" value="cancer">Cancer</ion-select-option>
+                            <ion-select-option class="input" value="cardiovascular">Cardiovascular</ion-select-option>
+                        </ion-select>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label floating>City:</ion-label>
+                        <ion-input [placeholder]="profile.city" type="string" required="true"
+                                   [(ngModel)]="profile.city"></ion-input>
+                    </ion-item>
+                </ion-list>
+            </ion-card-content>
+        </div>
+    </ion-grid>
+</ion-content>
+
+<ion-footer *ngIf="updateUid; else setup">
+    <ion-toolbar color="success">
+        <ion-button expand="full" fill="clear" color="light" (click)="updateProfile()">
+            <ion-icon name="save" slot="start"></ion-icon>
+            Update
+        </ion-button>
+    </ion-toolbar>
+</ion-footer>
+
+<ng-template #setup>
+    <ion-footer>
+        <ion-toolbar color="success">
+            <ion-button expand="full" fill="clear" color="light" (click)="createProfile()">
+                <ion-icon name="checkmark" slot="start"></ion-icon>
+                Confirm
+            </ion-button>
+        </ion-toolbar>
+    </ion-footer>
+</ng-template>

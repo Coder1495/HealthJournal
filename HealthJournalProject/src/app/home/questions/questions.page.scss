@@ -1,0 +1,55 @@
+ion-content {
+  --background: white; // url('../../../assets/background.jpg') 0 0/100% 100% no-repeat;
+}
+
+ion-toolbar {
+  --background: rgb(17, 100, 79); // url('../../../assets/background.jpg') 0 0/100% 100% no-repeat;
+  color: white;
+  height: 90px;
+}
+
+ion-grid {
+  display: grid;
+
+  ion-row {
+    justify-content: center;
+  }
+}
+
+ion-fab-button {
+  height: 28px;
+  width: 28px;
+  --background: transparent;
+}
+
+p {
+  color: black;
+  font-size: larger;
+  padding-left: 5%;;
+}
+
+ion-label {
+  color: black;
+}
+
+.next {
+  float: right;
+}
+
+.pic {
+  width: 25px;
+  height: 25px;
+}
+
+.header {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.rating {
+  display: grid;
+  align-items: center;
+  margin-left: 4em;
+}

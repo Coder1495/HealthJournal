@@ -1,0 +1,25 @@
+<ion-content>
+    <div class="appName">
+        <img [src]="logo" style="height: 90px; width: 90px;"/>
+        <br>
+        <ion-title style="text-align: center;font-size: 30px;">Health Journal</ion-title>
+    </div>
+    <br><br><br>
+    <ion-grid class="over">
+        <ion-card-content>
+            <ion-input class="input" placeholder="  Email" type="email" [(ngModel)]="email"></ion-input>
+            <br>
+            <ion-input class="input" placeholder="  Password" type="password" [(ngModel)]="password"></ion-input>
+            <br>
+            <ion-input class="input" placeholder="  Re-Password" type="password" [(ngModel)]="repassword"></ion-input>
+            <br>
+            <br>
+            <ion-button expand="block" color="rgb(17, 100, 79)" style="background-color: rgb(17, 100, 79);"
+                        (click)="register()">Register
+            </ion-button>
+        </ion-card-content>
+        <ion-grid>
+            <ion-label class="newAcc" routerLink='/tabs' routerDirection='root'>Already have an account</ion-label>
+        </ion-grid>
+    </ion-grid>
+</ion-content>
