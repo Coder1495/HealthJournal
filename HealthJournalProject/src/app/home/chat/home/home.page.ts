@@ -74,9 +74,11 @@ export class HomePage implements OnInit {
             user: this.data.nickName,
             userId: this.firebaseAuthService.auth.currentUser.uid,
             message: this.data.message,
-            sendDate: Date()
+            sendDate:  new Date().toUTCString()
         });
         this.data.message = '';
+        console.log(newData);
+        
     }
 
     ngOnInit() {
