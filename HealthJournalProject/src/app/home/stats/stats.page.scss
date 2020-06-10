@@ -1,0 +1,50 @@
+div.page-padding {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width:400px;
+}
+
+div.overlap {
+  display: grid;
+}
+
+ion-img.wheel {
+  height: 150px;
+  grid-column: 1;
+  grid-row: 1;
+  transform-origin: center;
+}
+
+ion-img.dial {
+  height: 90px;
+  grid-column: 1;
+  grid-row: 1;  
+  transform-origin: center;
+  transform: translateY(30px) rotate(90deg)
+}
+
+ion-img.bar {
+  height: 17px;
+}
+
+.space-10 {
+  height: 10px;
+}
+
+.space-20 {
+  height: 20px;
+}
+
+div.ion-padding {
+  background-color: #f9f9f9;
+  height: 100vh;
+}
+
+canvas.chart {
+  width: 80%;
+  padding: 0px 10px 0px 10px;
+  border: 2px solid grey;
+}
+

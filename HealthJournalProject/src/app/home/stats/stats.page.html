@@ -1,9 +1,29 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>stats</ion-title>
+    <ion-title>
+      Stats
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-Hello World
+  <div class='page-padding'>
+
+  <div class='space-10'></div>
+
+  <h4>Wellbeing Index</h4>
+
+  <div class="overlap">
+    <ion-img class="dial" [src]="dial"></ion-img>
+    <ion-img class="wheel" [src]="color_wheel"></ion-img>
+  </div>
+
+  <div class='space-20'></div>
+  <ion-img class="bar" [src]="bar"></ion-img>
+
+  <div class='space-20'></div>
+  <canvas id="chart" class="chart" width="400" height="200"></canvas>
+  <div class='space-20'></div>
+  <canvas id="chart" class="chart" width="400" height="200"></canvas>
+</div>
 </ion-content>
