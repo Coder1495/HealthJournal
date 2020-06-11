@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "healthcare-cda23"
+    "default": "healthcare-cda23",
+    "HealthJournal": "healthcare-cda23"
   }
 }

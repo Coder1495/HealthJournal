@@ -27,7 +27,7 @@ garmin.post('/api/dailies', (req, res) => {
             
             for(let data of dataArray) {
                 cred = db.ref(`users/${data.userId}/garmin/${data.calendarDate}`);
-                cred.set({dailies: data}, {merge: true});
+                cred.update({dailies: data});
             }
 
             return res.status(200).send();
@@ -51,7 +51,7 @@ garmin.post('/api/epoch', (req, res) => {
             console.log('epoch', {dataArray});
             for(let data of dataArray) {
                 cred = db.ref(`users/${data.userId}/garmin/${data.calendarDate}`);
-                cred.set({epoch: data}, {merge: true});
+                cred.update({epoch: data});
             }
 
             return res.status(200).send();
@@ -73,7 +73,7 @@ garmin.post('/api/sleeps', (req, res) => {
             console.log('sleeps', {dataArray});
             for(let data of dataArray) {
                 cred = db.ref(`users/${data.userId}/garmin/${data.calendarDate}`);
-                cred.set({sleeps: data}, {merge: true});
+                cred.update({sleeps: data});
             }
 
             return res.status(200).send();
@@ -97,7 +97,7 @@ garmin.post('/api/pulseOX', (req, res) => {
             console.log('pulseOX', {dataArray});
             for(let data of dataArray) {
                 cred = db.ref(`users/${data.userId}/garmin/${data.calendarDate}`);
-                cred.set({pulseox: data}, {merge: true});
+                cred.update({pulseox: data});
             }
 
             return res.status(200).send();
