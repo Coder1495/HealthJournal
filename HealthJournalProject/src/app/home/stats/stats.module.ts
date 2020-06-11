@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { PanelComponent } from '../panel/panel.component';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -15,6 +16,6 @@ import { StatsPage } from './stats.page';
     IonicModule,
     StatsPageRoutingModule
   ],
-  declarations: [StatsPage]
+  declarations: [StatsPage, PanelComponent]
 })
 export class StatsPageModule {}

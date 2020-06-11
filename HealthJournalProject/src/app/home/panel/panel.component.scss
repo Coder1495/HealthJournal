@@ -45,16 +45,18 @@ div.ion-padding {
 canvas.chart {
   width: 80%;
   padding: 0px 10px 0px 10px;
-  border: 1px solid grey;
+  background-color: #130749e1;
 }
 
 div.accordion {
   width: '100%';
-  background-color: #D0D6D0;
-  height: 1.5em;
+  color: white;
+  height: 65px;
   padding-left: 6px;
+  padding-top: 2px;
   cursor: pointer;
-  color: rgb(61, 80, 19)
+  background-color: #130749e1;
+  border-bottom: 1px solid grey; 
 }
 div.accordion h5 {
   display: 'inline-block';
@@ -64,12 +66,39 @@ div.accordion h5 {
   margin: 0px;
 }
 div.accordion div {
-  display: 'inline-block';
+  display: 'block';
   background-color: transparent;
-  text-align: right;
-  float: right;
+  width: 100%;
+  display: Grid;
+}
+div.accordion div div {
+  display: table-cell;
+  width: 50px;
+  color: black;
+  background-color: transparent;
+  margin-left: 4px;
+  margin-right: 4px;
+  border: 1px solid white;
+  color: white;
+  border-collapse: separate;
+  padding: 0 4px 0 4px;
+  text-align: center;
+}
+div.accordion div:nth-of-type(2) div {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 12px;
+}
+div.accordion div div:nth-child(1) {
+  grid-column: 3 / 6;
+  grid-row: 1;
+}
+div.accordion div div:nth-child(2) {
+  grid-column: 4 / 6;
+  grid-row: 1;
 }
 div.accordion span {
   position: relative;
-  top: 3px;
+  top: 28px;
 }

@@ -1,0 +1,21 @@
+
+<div class='accordion' (click)="clickHandler($event)">
+
+  <h5>{{panel.title}}</h5>
+  <span *ngIf="open">▼</span>
+  <span *ngIf="!open">◀</span>
+
+  <div>
+    <div>afs</div>
+    <div>afs</div>
+  </div>
+  <div>
+    <div>afs</div>
+    <div>afs</div>
+  </div>
+
+</div>
+
+<div class="chart">
+  <canvas #chart id='chart' class="chart" width="400" height="200"></canvas>
+</div>
