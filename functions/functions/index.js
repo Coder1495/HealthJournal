@@ -23,9 +23,9 @@ garmin.post('/api/dailies', (req, res) => {
         try
         {
             const dataArray = req.body.dailies;
-            console.log('dailies', {dataArray}); // req.body.dailies[0].userId);
             
             for(let data of dataArray) {
+                console.log('dailies', req.body.dailies);
                 cred = db.ref(`users/${data.userId}/garmin/${data.calendarDate}`);
                 cred.update({dailies: data});
             }
@@ -40,16 +40,16 @@ garmin.post('/api/dailies', (req, res) => {
     })();
 });
 
-//stress
-garmin.post('/api/epoch', (req, res) => {
+//epochs
+garmin.post('/api/epochs', (req, res) => {
 
     (async () => {
 
         try
         {
-            const dataArray = req.body.epoch;
-            console.log('epoch', {dataArray});
+            const dataArray = req.body.epochs;
             for(let data of dataArray) {
+                console.log('dailies', req.body.epochs);
                 cred = db.ref(`users/${data.userId}/garmin/${data.calendarDate}`);
                 cred.update({epoch: data});
             }
@@ -70,8 +70,8 @@ garmin.post('/api/sleeps', (req, res) => {
         try
         {
             const dataArray = req.body.sleeps;
-            console.log('sleeps', {dataArray});
             for(let data of dataArray) {
+                console.log('dailies', req.body.sleeps);
                 cred = db.ref(`users/${data.userId}/garmin/${data.calendarDate}`);
                 cred.update({sleeps: data});
             }
@@ -94,12 +94,11 @@ garmin.post('/api/pulseOX', (req, res) => {
         try
         {
             const dataArray = req.body.pulseox;
-            console.log('pulseOX', {dataArray});
             for(let data of dataArray) {
+                console.log('dailies', req.body.pulseox);
                 cred = db.ref(`users/${data.userId}/garmin/${data.calendarDate}`);
                 cred.update({pulseox: data});
             }
-
             return res.status(200).send();
         }
         catch (error)
