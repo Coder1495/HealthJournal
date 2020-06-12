@@ -16,11 +16,26 @@ const lineColors = ['rgba(255, 99, 132, 1)',
 export class StatsPage implements OnInit {
   @ViewChild('lineCanvas', { static: false }) lineCanvas;
 
-  dial: any = '../../../assets/chart/Dial3.svg';
-  color_wheel: any = '../../../assets/chart/color-wheel.svg';
-  bar: any = '../../../assets/chart/bar.svg'; 
+  assetPath = '../../../assets/chart/';
+  wheel: any = '../../../assets/chart/numberedwheel.svg';
+  bar: any = '../../../assets/chart/numberedbar.svg'; 
 
-  panels = statsViewData.panels;
+  stats = statsViewData;
+  wellbeingIndex = this.stats.WellbeingIndex;
+  colorZone = Math.floor(this.wellbeingIndex / 20);
+
+  coloredDial = this.assetPath+'dial'+this.colorZone+'.svg';
+  temperatureLegend = this.assetPath+'temperature'+this.colorZone+'.svg';
+
+  dialRotation = { 
+    'width': '90px',
+    'transform': `
+    translateY(30px) 
+    rotate(${ (this.wellbeingIndex/100.00) * 300 - 150 }deg)
+  `};
+
+  panels = this.stats.panels as Array<object>;
+  isOpen = Array(this.panels.length).map(item=>false);
 
   constructor() {
   }

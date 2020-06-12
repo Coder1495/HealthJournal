@@ -26,10 +26,6 @@ export class PanelComponent implements OnInit {
 
   @ViewChild('chart', { static: true }) refCanvas : ElementRef<HTMLCanvasElement>;
 
-  dial: any = '../../../assets/chart/Dial3.svg';
-  color_wheel: any = '../../../assets/chart/color-wheel.svg';
-  bar: any = '../../../assets/chart/bar.svg'; 
-  
   elemCanvas : HTMLCanvasElement;
   ctxCanvas : CanvasRenderingContext2D;
 
@@ -38,7 +34,6 @@ export class PanelComponent implements OnInit {
   ngOnInit() { }
 
   ngAfterViewInit() {
-    //    const ctxCanvas = (document.getElementById('chart') as HTMLCanvasElement).getContext('2d');
     this.elemCanvas = this.refCanvas.nativeElement as HTMLCanvasElement;
     this.ctxCanvas = this.elemCanvas.getContext('2d');
     this.renderChart();

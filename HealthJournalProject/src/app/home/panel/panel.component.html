@@ -6,14 +6,13 @@
   <span *ngIf="!open">◀</span>
 
   <div>
-    <div>afs</div>
-    <div>afs</div>
-  </div>
+    <div *ngFor="let measure of panel.measures">
+      {{measure.twoWeeksData.slice(-1)}}
+    </div>
+  </div>    
   <div>
-    <div>afs</div>
-    <div>afs</div>
+    <div *ngFor="let measure of panel.measures">{{measure.title}}</div>
   </div>
-
 </div>
 
 <div class="chart">

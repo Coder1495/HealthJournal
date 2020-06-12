@@ -1,3 +1,7 @@
+h4 {
+  color: #170957;
+}
+
 div.page-padding {
   margin-left: auto;
   margin-right: auto;
@@ -10,29 +14,82 @@ div.overlap {
   display: grid;
 }
 
+div.overlap > div {
+  margin: 0% 50% 0% 50%;
+
+  // REVIEW: hacks!
+  position: relative;
+  top: 65px; 
+  left: -89px;
+
+  text-align: center;
+  height: 50px;
+  width: 60px;
+  grid-column: 1;
+  grid-row: 1;
+  transform-origin: center;
+  color: #170957;
+  font-size: 18px;
+  font-weight: 500;
+}
+
 ion-img.wheel {
   height: 150px;
+  width: 150px;
+
+  // REVIEW: hacks!
+  margin-left: calc(50% - 135px);
+
   grid-column: 1;
   grid-row: 1;
   transform-origin: center;
 }
 
+ion-img.bar {
+  grid-column: 1;
+  grid-row: 1;  
+}
+
+ion-img.temperature {
+  grid-column: 1;
+  grid-row: 1;  
+
+  // REVIEW: hacks!
+  position: relative;
+  top: 0px;
+}
+
 ion-img.dial {
-  height: 90px;
+  // REVIEW: hacks!
+  position: relative;
+  top: 7px;
+  left: calc(50% - 105px);
+
+  height: 78px;
+  height: 78px;
   grid-column: 1;
   grid-row: 1;  
   transform-origin: center;
-  transform: translateY(30px) rotate(90deg)
+}
+
+ion-img.temperature {
+  height: 32px;
+  height: 32px;
+  grid-column: 1;
+  grid-row: 1;  
+  transform-origin: center;
+
+  position: relative;
+  top: -32px;
 }
 
 ion-img.bar {
-  height: 17px;
+  height: 28px;
 }
 
 .space-10 {
   height: 10px;
 }
-
 .space-20 {
   height: 20px;
 }
