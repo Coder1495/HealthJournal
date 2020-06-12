@@ -25,13 +25,13 @@ export const statsViewData = {
   PatientID : 'A123123',
   City: 'Los Angeles',
   State: 'CA',
-  WellbeingIndex: 87,
+  WellbeingIndex: 94,
   YesterdayWellbeingIndex: 52,
-  TomorrowWellbeingIndex: 80,
-  EnvironmentalQualityIndex: 19,
+  TomorrowWellbeingIndex: 95,
+  EnvironmentalQualityIndex: 88,
   panels : [
     {
-      title : 'Wellbeing and QoL',
+      title : 'Wellbeing & Environmental Index',
       highlightLabel : '',
       highlightMeasure : '',
       measures : [
