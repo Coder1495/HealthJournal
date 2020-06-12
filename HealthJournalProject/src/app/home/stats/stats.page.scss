@@ -1,90 +1,104 @@
+ion-title.background {
+  color: white;
+  background-color: rgb(95, 95, 95); // url('../../../assets/20091.jpg');
+}
+
 h4 {
   color: #170957;
+  margin: 0px;
+  margin-left: 6px;
+}
+h5 {
+  letter-spacing: 2px;
 }
 
 div.page-padding {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 10px;
   max-width:400px;
+}
+
+div.overlapEnvironment {
+  display: grid;  
+  width:240px;
+  max-height: 0px;
+  margin: 40px;
+  margin-left: calc(50% - 120px);
+}
+div.overlapEnvironment > div {
+  grid-column: 1;
+  grid-row: 1;
+  width: 40px !important;
+  text-align: center;
+  transform-origin: center;
+
+  // REVIEW: hacks!
+  position: relative;
+  top: -28px; 
+  left: -140px;
+  font-size: 14px;
+}
+ion-img.bar {
+  grid-column: 1;
+  grid-row: 1;  
+  width: 100%;
+}
+ion-img.temperature {
+  width: 90px;  
+  // REVIEW: hacks!
+  position: relative;
+  top: -32px;
+  left: -166px;
+
+  height: 32px;
+  grid-column: 1;
+  grid-row: 1;  
+  transform-origin: center;
 }
 
 div.overlap {
   display: grid;
-}
-
-div.overlap > div {
-  margin: 0% 50% 0% 50%;
-
-  // REVIEW: hacks!
+  width:240px;
+  max-height: 170px;
+  margin: 0px;
+  padding-top: 10px;
+  margin-left: calc(50% - 120px);
   position: relative;
-  top: 65px; 
-  left: -89px;
-
+  top: -15px;
+}
+div.overlap > div {
+  width: 60px;
+  position: relative;
+  margin-left: calc(50% - 30px);
+  top: 68px;
   text-align: center;
   height: 50px;
-  width: 60px;
   grid-column: 1;
-  grid-row: 1;
+  grid-row: 1;  
   transform-origin: center;
   color: #170957;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
 }
 
 ion-img.wheel {
-  height: 150px;
-  width: 150px;
-
-  // REVIEW: hacks!
-  margin-left: calc(50% - 135px);
-
+  width: 170px;
+  position: relative;
+  margin-left: calc(50% - 85px);
   grid-column: 1;
   grid-row: 1;
   transform-origin: center;
 }
 
-ion-img.bar {
-  grid-column: 1;
-  grid-row: 1;  
-}
-
-ion-img.temperature {
-  grid-column: 1;
-  grid-row: 1;  
-
-  // REVIEW: hacks!
-  position: relative;
-  top: 0px;
-}
-
 ion-img.dial {
-  // REVIEW: hacks!
+  width: 84px;
   position: relative;
-  top: 7px;
-  left: calc(50% - 105px);
-
-  height: 78px;
-  height: 78px;
+  left: calc(50% - 42px); 
+  top: 2px; // minor alignment adjustment, related to svg graphic cuts
   grid-column: 1;
   grid-row: 1;  
   transform-origin: center;
-}
-
-ion-img.temperature {
-  height: 32px;
-  height: 32px;
-  grid-column: 1;
-  grid-row: 1;  
-  transform-origin: center;
-
-  position: relative;
-  top: -32px;
-}
-
-ion-img.bar {
-  height: 28px;
 }
 
 .space-10 {
@@ -129,4 +143,69 @@ div.accordion div {
 div.accordion span {
   position: relative;
   top: 3px;
+}
+
+div.wellbeingFooter {
+  display: grid;
+  max-height:45px;
+  grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+  position: relative;
+  top: -45px;
+  color: #170957;
+}
+div.wellbeingFooter div {
+  display: inline-block;
+  min-width: 50px;
+  grid-row: 1;  
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: show;
+}
+
+div.wellbeingFooter div:nth-of-type(1) {
+  grid-column: 2;
+}
+div.wellbeingFooter div:nth-of-type(2) {
+  padding: auto;
+  padding-top: 20px;
+  font-size: 18px;
+  grid-column: 3;
+  position: relative;
+  top: 5px;
+}
+div.wellbeingFooter div:nth-of-type(3) {
+  grid-column: 4;
+}
+div.wellbeingFooter svg {
+  display: block;
+  margin: auto;
+  height:50px;
+  width:50px;
+}
+div.wellbeingFooter div.overlapMiniBubble div {
+  position: absolute;
+}
+div.wellbeingFooter div.overlapMiniBubble div span {
+  position: relative;
+  top: -53px;
+  left: -25px;
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+}
+
+.black {
+  color: black !important;
+}
+
+.white {
+  color: white !important;
+}
+
+.environmentalQual {
+  color: #170957;
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+  top: -5px;
 }

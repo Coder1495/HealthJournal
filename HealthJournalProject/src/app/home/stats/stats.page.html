@@ -1,42 +1,66 @@
-<!--
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Stats
+    <ion-title class="background">
+      <h5>Stats</h5>
     </ion-title>
   </ion-toolbar>
 </ion-header>
--->
+
 
 <ion-content>
   <div class='page-padding'>
 
-  <h4>Wellbeing Index</h4>
+    <h4>Wellbeing Index</h4>
 
-  <div class="overlap">
-    <ion-img 
-      class="dial" 
-      [src]="coloredDial"
-      [ngStyle]="dialRotation"
-    >
-    </ion-img>
-    <ion-img class="wheel" [src]="wheel"></ion-img>
-    <div>{{wellbeingIndex}}%</div>
+    <div class="overlap">
+      <ion-img 
+        class="dial" 
+        [src]="coloredDial"
+        [ngStyle]="dialRotation"
+      >
+      </ion-img>
+      <ion-img class="wheel" [src]="wheel"></ion-img>
+      <div [ngClass]="wellbeingTextColor">{{wellbeingIndex}}%</div>
+    </div>
+
+    <div class="wellbeingFooter">
+      <div class="overlapMiniBubble">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+        [ngClass]="yesterdayClass">
+          <circle cx="50" cy="50" r="50"/>
+        </svg>
+        Yesterday<br/>
+        <div><span [ngClass]="yesterdayTextColor">{{yesterdayIndex}}%</span></div>
+      </div>    
+    
+      <div>
+        {{this.wellbeingQual}}
+      </div> 
+
+      <div class="overlapMiniBubble">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+          [ngClass]="tomorrowClass"> 
+          <circle cx="50" cy="50" r="50"/>
+        </svg>
+        Tomorrow (est.)<br/>
+        <div><span [ngClass]="tomorrowTextColor">{{tomorrowIndex}}%</span></div>
+      </div>    
   </div>
 
   <h4>Environmental Quality Index</h4>
-  <div class='space-10'></div>
-  <div class='space-20'></div>
-  <div class="overlap">
+
+  <div class="overlapEnvironment">
     <ion-img 
       class="temperature" 
       [src]="temperatureLegend"
+      [ngStyle]="temperatureShift"
     >
     </ion-img>
     <ion-img class="bar" [src]="bar"></ion-img>
+    <div [ngStyle]="temperatureShift" [ngClass]="environmentalTextColor">{{environmentalQualityIndex}}%</div>
   </div>
-
-  <div class='space-20'></div>
+  <div class="environmentalQual">{{environmentalQual}}</div>
+  <div class='space-10'></div>
 
   <app-panel *ngFor="let panel of panels; let i = index"
     [panel]="panels[i]" 
