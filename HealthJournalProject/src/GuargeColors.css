@@ -1,0 +1,24 @@
+/*
+// Guages Colors: Red - Orange - Yellow - Light Green - Green
+// (Named with ordinal, 0-4 digits for easy coding)
+// This supports the various 'guages' such as the wheel, bar, 
+// and circles on the 'Stats' page, and the happy-ok-sad faces 
+// elsewhere in the app.
+//
+// NOTE: 'fill' used to color svg elements.
+*/
+.GuageColor0 {
+  fill: #C21818;
+}
+.GuageColor1 {
+  fill: #F48722;
+}
+.GuageColor2 {
+  fill: #F0DB20;
+}
+.GuageColor3 {
+  fill: #86C03B;
+}
+.GuageColor4 {
+  fill: #0D760D;
+}

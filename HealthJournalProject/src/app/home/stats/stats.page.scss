@@ -1,0 +1,216 @@
+ion-title.background {
+  color: white;
+  background-color: rgb(95, 95, 95); // url('../../../assets/20091.jpg');
+}
+
+h4 {
+  color: #170957;
+  margin: 0px;
+  margin-left: 6px;
+}
+h5 {
+  letter-spacing: 2px;
+}
+
+div.page-padding {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  max-width:400px;
+}
+
+div.overlapEnvironment {
+  display: grid;  
+  width:240px;
+  max-height: 0px;
+  margin: 40px;
+  margin-left: calc(50% - 120px);
+}
+div.overlapEnvironment > div {
+  grid-column: 1;
+  grid-row: 1;
+  width: 40px !important;
+  text-align: center;
+  transform-origin: center;
+
+  // REVIEW: hacks!
+  position: relative;
+  top: -28px; 
+  left: -140px;
+  font-size: 14px;
+}
+ion-img.bar {
+  grid-column: 1;
+  grid-row: 1;  
+  width: 100%;
+}
+ion-img.temperature {
+  width: 90px;  
+  // REVIEW: hacks!
+  position: relative;
+  top: -32px;
+  left: -166px;
+
+  height: 32px;
+  grid-column: 1;
+  grid-row: 1;  
+  transform-origin: center;
+}
+
+div.overlap {
+  display: grid;
+  width:240px;
+  max-height: 170px;
+  margin: 0px;
+  padding-top: 10px;
+  margin-left: calc(50% - 120px);
+  position: relative;
+  top: -15px;
+}
+div.overlap > div {
+  width: 60px;
+  position: relative;
+  margin-left: calc(50% - 30px);
+  top: 68px;
+  text-align: center;
+  height: 50px;
+  grid-column: 1;
+  grid-row: 1;  
+  transform-origin: center;
+  color: #170957;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+ion-img.wheel {
+  width: 170px;
+  position: relative;
+  margin-left: calc(50% - 85px);
+  grid-column: 1;
+  grid-row: 1;
+  transform-origin: center;
+}
+
+ion-img.dial {
+  width: 84px;
+  position: relative;
+  left: calc(50% - 42px); 
+  top: 2px; // minor alignment adjustment, related to svg graphic cuts
+  grid-column: 1;
+  grid-row: 1;  
+  transform-origin: center;
+}
+
+.space-10 {
+  height: 10px;
+}
+.space-20 {
+  height: 20px;
+}
+
+div.ion-padding {
+  background-color: #f9f9f9;
+  height: 100vh;
+}
+
+canvas.chart {
+  width: 80%;
+  padding: 0px 10px 0px 10px;
+  border: 1px solid grey;
+}
+
+div.accordion {
+  width: '100%';
+  background-color: #D0D6D0;
+  height: 1.5em;
+  padding-left: 6px;
+  cursor: pointer;
+  color: rgb(61, 80, 19)
+}
+div.accordion h5 {
+  display: 'inline-block';
+  background-color: transparent;
+  float: left;
+  width: calc(100% - 25px);
+  margin: 0px;
+}
+div.accordion div {
+  display: 'inline-block';
+  background-color: transparent;
+  text-align: right;
+  float: right;
+}
+div.accordion span {
+  position: relative;
+  top: 3px;
+}
+
+div.wellbeingFooter {
+  display: grid;
+  max-height:45px;
+  grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+  position: relative;
+  top: -45px;
+  color: #170957;
+}
+div.wellbeingFooter div {
+  display: inline-block;
+  min-width: 50px;
+  grid-row: 1;  
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: show;
+}
+
+div.wellbeingFooter div:nth-of-type(1) {
+  grid-column: 2;
+}
+div.wellbeingFooter div:nth-of-type(2) {
+  padding: auto;
+  padding-top: 20px;
+  font-size: 18px;
+  grid-column: 3;
+  position: relative;
+  top: 5px;
+  font-size: 16px;
+}
+div.wellbeingFooter div:nth-of-type(3) {
+  grid-column: 4;
+}
+div.wellbeingFooter svg {
+  display: block;
+  margin: auto;
+  height:50px;
+  width:50px;
+}
+div.wellbeingFooter div.overlapMiniBubble div {
+  position: absolute;
+}
+div.wellbeingFooter div.overlapMiniBubble div span {
+  position: relative;
+  top: -53px;
+  left: -25px;
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+}
+
+.black {
+  color: black !important;
+}
+
+.white {
+  color: white !important;
+}
+
+.environmentalQual {
+  color: #170957;
+  font-size: 16px;
+  text-align: center;
+  position: relative;
+  top: -5px;
+}
+
+span.smallerText {
+  font-size: 14px;
+}

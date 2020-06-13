@@ -39,6 +39,16 @@ const routes: Routes = [
                 ]
             },
             {
+                path: 'stats',
+                children: [
+                    {
+                        path: '',
+                        loadChildren: () =>
+                            import('../stats/stats.module').then(m => m.StatsPageModule)
+                    }
+                ]
+            },
+            {
                 path: 'questions/document',
                 children: [
                     {
