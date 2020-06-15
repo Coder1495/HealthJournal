@@ -40,6 +40,30 @@ garmin.post('/api/dailies', (req, res) => {
     })();
 });
 
+//activities
+garmin.post('/api/activities', (req, res) => {
+
+    (async () => {
+
+        try
+        {
+            const dataArray = req.body.activities;
+            for(let data of dataArray) {
+                console.log('activities', req.body.activities);
+                cred = db.ref(`users/${data.userId}/garmin/${data.calendarDate}`);
+                cred.update({activities: data});
+            }
+
+            return res.status(200).send();
+        }
+        catch (error)
+        {
+            console.log(error);
+            return res.status(500).send(error);
+        }
+    })();
+});
+
 //epochs
 garmin.post('/api/epochs', (req, res) => {
 
@@ -49,7 +73,7 @@ garmin.post('/api/epochs', (req, res) => {
         {
             const dataArray = req.body.epochs;
             for(let data of dataArray) {
-                console.log('dailies', req.body.epochs);
+                console.log('epochs', req.body.epochs);
                 cred = db.ref(`users/${data.userId}/garmin/${data.calendarDate}`);
                 cred.update({epoch: data});
             }
@@ -71,9 +95,75 @@ garmin.post('/api/sleeps', (req, res) => {
         {
             const dataArray = req.body.sleeps;
             for(let data of dataArray) {
-                console.log('dailies', req.body.sleeps);
+                console.log('sleeps', req.body.sleeps);
                 cred = db.ref(`users/${data.userId}/garmin/${data.calendarDate}`);
                 cred.update({sleeps: data});
+            }
+
+            return res.status(200).send();
+        }
+        catch (error)
+        {
+            console.log(error);
+            return res.status(500).send(error);
+        }
+    })();
+});
+
+//bodyComps
+garmin.post('/api/bodyComps', (req, res) => {
+    (async () => {
+        try
+        {
+            const dataArray = req.body.bodyComps;
+            for(let data of dataArray) {
+                console.log('bodyComps', req.body.bodyComps);
+                cred = db.ref(`users/${data.userId}/garmin/${data.calendarDate}`);
+                cred.update({bodyComps: data});
+            }
+
+            return res.status(200).send();
+        }
+        catch (error)
+        {
+            console.log(error);
+            return res.status(500).send(error);
+        }
+    })();
+});
+
+//stressDetails
+garmin.post('/api/stressDetails', (req, res) => {
+    (async () => {
+        try
+        {
+            const dataArray = req.body.stressDetails;
+            for(let data of dataArray) {
+                console.log('stressDetails', req.body.stressDetails);
+                cred = db.ref(`users/${data.userId}/garmin/${data.calendarDate}`);
+                cred.update({stressDetails: data});
+            }
+
+            return res.status(200).send();
+        }
+        catch (error)
+        {
+            console.log(error);
+            return res.status(500).send(error);
+        }
+    })();
+});
+
+//userMetrics
+garmin.post('/api/userMetrics', (req, res) => {
+    (async () => {
+        try
+        {
+            const dataArray = req.body.userMetrics;
+            for(let data of dataArray) {
+                console.log('userMetrics', req.body.userMetrics);
+                cred = db.ref(`users/${data.userId}/garmin/${data.calendarDate}`);
+                cred.update({userMetrics: data});
             }
 
             return res.status(200).send();
