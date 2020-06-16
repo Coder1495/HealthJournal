@@ -1,7 +1,7 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { IonicModule } from '@ionic/angular';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {IonicModule} from '@ionic/angular';
 
-import { PanelComponent } from './panel.component';
+import {PanelComponent} from './panel.component';
 
 describe('PanelComponent', () => {
   let component: PanelComponent;
@@ -9,7 +9,7 @@ describe('PanelComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PanelComponent ],
+      declarations: [PanelComponent],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 

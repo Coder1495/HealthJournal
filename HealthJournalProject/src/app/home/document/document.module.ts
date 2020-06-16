@@ -10,16 +10,16 @@ import {TagInputModule} from 'ngx-chips';
 
 
 @NgModule({
-    imports: [
-        TagInputModule,
-        FormsModule,
-        ReactiveFormsModule,
-        CommonModule,
-        IonicModule,
-        AngularFireDatabaseModule,
-        RouterModule.forChild([{path: '', component: DocumentPage}])
-    ],
-    declarations: [DocumentPage]
+  imports: [
+    TagInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    CommonModule,
+    IonicModule,
+    AngularFireDatabaseModule,
+    RouterModule.forChild([{path: '', component: DocumentPage}])
+  ],
+  declarations: [DocumentPage]
 })
 export class DocumentPageModule {
 }

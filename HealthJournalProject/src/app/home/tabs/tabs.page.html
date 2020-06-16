@@ -1,61 +1,61 @@
 <div *ngIf="Uauth.authenticated; else login">
-    <ion-tabs>
-        <ion-tab-bar slot="bottom" class="background">
+  <ion-tabs>
+    <ion-tab-bar slot="bottom" class="background">
 
-            <ion-tab-button tab="home">
-                <ion-icon name="home-outline"></ion-icon>
-                <ion-label class="tab">Check In</ion-label>
-            </ion-tab-button>
+      <ion-tab-button tab="home">
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label class="tab">Check In</ion-label>
+      </ion-tab-button>
 
-            <ion-tab-button tab="questions">
-                <ion-icon name="list-circle-outline"></ion-icon>
-                <ion-label class="tab">Wellbeing</ion-label>
-            </ion-tab-button>
+      <ion-tab-button tab="questions">
+        <ion-icon name="list-circle-outline"></ion-icon>
+        <ion-label class="tab">Wellbeing</ion-label>
+      </ion-tab-button>
 
-            <ion-tab-button routerLink="/chat" routerDirection="root">
-                <ion-icon name="chatbubbles-outline"></ion-icon>
-                <ion-label class="tab">Chat</ion-label>
-            </ion-tab-button>
+      <ion-tab-button routerLink="/chat" routerDirection="root">
+        <ion-icon name="chatbubbles-outline"></ion-icon>
+        <ion-label class="tab">Chat</ion-label>
+      </ion-tab-button>
 
-            <ion-tab-button tab="stats">
-                <ion-icon name="bar-chart-outline"></ion-icon>
-                <ion-label class="tab">Stats</ion-label>
-            </ion-tab-button>
+      <ion-tab-button tab="stats">
+        <ion-icon name="bar-chart-outline"></ion-icon>
+        <ion-label class="tab">Stats</ion-label>
+      </ion-tab-button>
 
-            <ion-tab-button tab="settings">
-                <ion-icon name="cog-outline"></ion-icon>
-                <ion-label class="tab">Settings</ion-label>
-            </ion-tab-button>
+      <ion-tab-button tab="settings">
+        <ion-icon name="cog-outline"></ion-icon>
+        <ion-label class="tab">Settings</ion-label>
+      </ion-tab-button>
 
-        </ion-tab-bar>
-    </ion-tabs>
+    </ion-tab-bar>
+  </ion-tabs>
 </div>
 
 <ng-template #login>
-    <ion-content>
-        <div class="appName">
-            <img [src]="ln.logo" style="height: 90px; width: 90px;"/>
-            <br>
-            <ion-title style="text-align: center;font-size: 30px; color:white">My Day</ion-title>
-        </div>
-        <br><br><br>
-        <ion-grid class="over">
-            <ion-card-content>
-                <ion-input class="input" placeholder="  Email" type="text" [(ngModel)]="ln.email"></ion-input>
-                <br>
-                <ion-input class="input" placeholder="  Password" type="password" [(ngModel)]="ln.password"></ion-input>
-                <br>
-                <ion-button expand="block" color="rgb(17, 100, 79)" style="background-color: rgb(17, 100, 79);"
-                            (click)="ln.login()">Log In
-                </ion-button>
-                <br>
-                <ion-button expand="block" color="danger" (click)="gp.googleLogin()">Google Plus
-                    <ion-icon slot="end" name="logo-google"></ion-icon>
-                </ion-button>
-            </ion-card-content>
-            <br>
-            <ion-label class="newAcc" routerLink='/register' routerDirection='root'>Create a new account
-            </ion-label>
-        </ion-grid>
-    </ion-content>
+  <ion-content>
+    <div class="appName">
+      <img [src]="ln.logo" style="height: 90px; width: 90px;"/>
+      <br>
+      <ion-title style="text-align: center;font-size: 30px; color:white">My Day</ion-title>
+    </div>
+    <br><br><br>
+    <ion-grid class="over">
+      <ion-card-content>
+        <ion-input class="input" placeholder="  Email" type="text" [(ngModel)]="ln.email"></ion-input>
+        <br>
+        <ion-input class="input" placeholder="  Password" type="password" [(ngModel)]="ln.password"></ion-input>
+        <br>
+        <ion-button expand="block" color="rgb(17, 100, 79)" style="background-color: rgb(17, 100, 79);"
+                    (click)="ln.login()">Log In
+        </ion-button>
+        <br>
+        <ion-button expand="block" color="danger" (click)="gp.googleLogin()">Google Plus
+          <ion-icon slot="end" name="logo-google"></ion-icon>
+        </ion-button>
+      </ion-card-content>
+      <br>
+      <ion-label class="newAcc" routerLink='/register' routerDirection='root'>Create a new account
+      </ion-label>
+    </ion-grid>
+  </ion-content>
 </ng-template>

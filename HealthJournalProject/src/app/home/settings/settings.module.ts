@@ -6,13 +6,13 @@ import {IonicModule} from '@ionic/angular';
 import {SettingsPage} from './settings.page';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        IonicModule,
-        RouterModule.forChild([{path: '', component: SettingsPage}])
-    ],
-    declarations: [SettingsPage]
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    RouterModule.forChild([{path: '', component: SettingsPage}])
+  ],
+  declarations: [SettingsPage]
 })
 export class SettingsPageModule {
 }

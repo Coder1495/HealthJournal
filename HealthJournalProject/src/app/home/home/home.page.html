@@ -1,65 +1,65 @@
 <ion-header>
-    <ion-toolbar><br>
-        <ion-title style="text-align: center;">
-            Check In
-        </ion-title>
-    </ion-toolbar>
+  <ion-toolbar><br>
+    <ion-title style="text-align: center;">
+      Check In
+    </ion-title>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content class="background" [fullscreen]="true" *ngIf="verifiedEmail; else verify">
-    <div class="raitng">
-        <ion-title *ngIf="Profile" style="text-align: center;">
-            Welcome {{(Profile |async)?.fullName}}!<br>
-        </ion-title>
-        <ion-title>
-            How are you today?
-        </ion-title>
-        <br><br>
-        <ion-row row-1 class="btn">
-            <ion-buttons>
-                <ion-button fill="clear" shape="round" (click)="submit(0)">
-                    <ion-img class="pic" [src]="happy"></ion-img>
-                </ion-button>&nbsp;&nbsp;Very Good
-            </ion-buttons>
-            <br>
-            <ion-buttons>
-                <ion-button fill="clear" shape="round" (click)="submit(1)">
-                    <ion-img class="pic" [src]="smile"></ion-img>
-                </ion-button>&nbsp;&nbsp;Good
-            </ion-buttons>
-            <br>
-            <ion-buttons>
-                <ion-button fill="clear" shape="round" (click)="submit(2)">
-                    <ion-img class="pic" [src]="normal"></ion-img>
-                </ion-button>&nbsp;&nbsp;Neutral
-            </ion-buttons>
-            <br>
-            <ion-buttons>
-                <ion-button fill="clear" shape="round" (click)="submit(3)">
-                    <ion-img class="pic" [src]="sad"></ion-img>
-                </ion-button>&nbsp;&nbsp;Bad
-            </ion-buttons>
-            <br>
-            <ion-buttons>
-                <ion-button fill="clear" shape="round" (click)="submit(4)">
-                    <ion-img class="pic" [src]="cry"></ion-img>
-                </ion-button>&nbsp;&nbsp;Very Bad
-            </ion-buttons>
-        </ion-row>
-    </div>
+  <div class="raitng">
+    <ion-title *ngIf="Profile" style="text-align: center;">
+      Welcome {{(Profile |async)?.fullName}}!<br>
+    </ion-title>
+    <ion-title>
+      How are you today?
+    </ion-title>
+    <br><br>
+    <ion-row row-1 class="btn">
+      <ion-buttons>
+        <ion-button fill="clear" shape="round" (click)="submit(0)">
+          <ion-img class="pic" [src]="happy"></ion-img>
+        </ion-button>&nbsp;&nbsp;Very Good
+      </ion-buttons>
+      <br>
+      <ion-buttons>
+        <ion-button fill="clear" shape="round" (click)="submit(1)">
+          <ion-img class="pic" [src]="smile"></ion-img>
+        </ion-button>&nbsp;&nbsp;Good
+      </ion-buttons>
+      <br>
+      <ion-buttons>
+        <ion-button fill="clear" shape="round" (click)="submit(2)">
+          <ion-img class="pic" [src]="normal"></ion-img>
+        </ion-button>&nbsp;&nbsp;Neutral
+      </ion-buttons>
+      <br>
+      <ion-buttons>
+        <ion-button fill="clear" shape="round" (click)="submit(3)">
+          <ion-img class="pic" [src]="sad"></ion-img>
+        </ion-button>&nbsp;&nbsp;Bad
+      </ion-buttons>
+      <br>
+      <ion-buttons>
+        <ion-button fill="clear" shape="round" (click)="submit(4)">
+          <ion-img class="pic" [src]="cry"></ion-img>
+        </ion-button>&nbsp;&nbsp;Very Bad
+      </ion-buttons>
+    </ion-row>
+  </div>
 </ion-content>
 
 <ng-template #verify>
-    <ion-content>
-        <ion-card class="verify">
-            <ion-item>Please verify your email first</ion-item>
-            <br>
-            <ion-button (click)="reload()" fill="clear">
-                <ion-icon name="refresh-circle-outline"></ion-icon>
-                Refresh
-            </ion-button>
-            <p (click)="resendEmail()" style="color:steelblue;">Resend verification email</p>
+  <ion-content>
+    <ion-card class="verify">
+      <ion-item>Please verify your email first</ion-item>
+      <br>
+      <ion-button (click)="reload()" fill="clear">
+        <ion-icon name="refresh-circle-outline"></ion-icon>
+        Refresh
+      </ion-button>
+      <p (click)="resendEmail()" style="color:steelblue;">Resend verification email</p>
 
-        </ion-card>
-    </ion-content>
+    </ion-card>
+  </ion-content>
 </ng-template>
