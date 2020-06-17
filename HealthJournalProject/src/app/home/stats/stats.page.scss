@@ -14,6 +14,7 @@ h4 {
   margin: 0px;
   margin-left: 6px;
 }
+
 h5 {
   letter-spacing: 2px;
 }
@@ -22,16 +23,17 @@ div.page-padding {
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
-  max-width:400px;
+  max-width: 400px;
 }
 
 div.overlapEnvironment {
-  display: grid;  
-  width:240px;
+  display: grid;
+  width: 240px;
   max-height: 0px;
   margin: 40px;
   margin-left: calc(50% - 120px);
 }
+
 div.overlapEnvironment > div {
   grid-column: 1;
   grid-row: 1;
@@ -41,17 +43,19 @@ div.overlapEnvironment > div {
 
   // REVIEW: hacks!
   position: relative;
-  top: -28px; 
+  top: -28px;
   left: -140px;
   font-size: 14px;
 }
+
 ion-img.bar {
   grid-column: 1;
-  grid-row: 1;  
+  grid-row: 1;
   width: 100%;
 }
+
 ion-img.temperature {
-  width: 90px;  
+  width: 90px;
   // REVIEW: hacks!
   position: relative;
   top: -32px;
@@ -59,13 +63,13 @@ ion-img.temperature {
 
   height: 32px;
   grid-column: 1;
-  grid-row: 1;  
+  grid-row: 1;
   transform-origin: center;
 }
 
 div.overlap {
   display: grid;
-  width:240px;
+  width: 240px;
   max-height: 170px;
   margin: 0px;
   padding-top: 10px;
@@ -73,6 +77,7 @@ div.overlap {
   position: relative;
   top: -15px;
 }
+
 div.overlap > div {
   width: 60px;
   position: relative;
@@ -81,7 +86,7 @@ div.overlap > div {
   text-align: center;
   height: 50px;
   grid-column: 1;
-  grid-row: 1;  
+  grid-row: 1;
   transform-origin: center;
   color: #170957;
   font-size: 20px;
@@ -100,16 +105,17 @@ ion-img.wheel {
 ion-img.dial {
   width: 84px;
   position: relative;
-  left: calc(50% - 42px); 
+  left: calc(50% - 42px);
   top: 2px; // minor alignment adjustment, related to svg graphic cuts
   grid-column: 1;
-  grid-row: 1;  
+  grid-row: 1;
   transform-origin: center;
 }
 
 .space-10 {
   height: 10px;
 }
+
 .space-20 {
   height: 20px;
 }
@@ -133,6 +139,7 @@ div.accordion {
   cursor: pointer;
   color: rgb(61, 80, 19)
 }
+
 div.accordion h5 {
   display: 'inline-block';
   background-color: transparent;
@@ -140,12 +147,14 @@ div.accordion h5 {
   width: calc(100% - 25px);
   margin: 0px;
 }
+
 div.accordion div {
   display: 'inline-block';
   background-color: transparent;
   text-align: right;
   float: right;
 }
+
 div.accordion span {
   position: relative;
   top: 3px;
@@ -153,16 +162,17 @@ div.accordion span {
 
 div.wellbeingFooter {
   display: grid;
-  max-height:45px;
+  max-height: 45px;
   grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
   position: relative;
   top: -45px;
   color: #170957;
 }
+
 div.wellbeingFooter div {
   display: inline-block;
   min-width: 50px;
-  grid-row: 1;  
+  grid-row: 1;
   text-align: center;
   white-space: nowrap;
   text-overflow: show;
@@ -171,6 +181,7 @@ div.wellbeingFooter div {
 div.wellbeingFooter div:nth-of-type(1) {
   grid-column: 2;
 }
+
 div.wellbeingFooter div:nth-of-type(2) {
   padding: auto;
   padding-top: 20px;
@@ -180,18 +191,22 @@ div.wellbeingFooter div:nth-of-type(2) {
   top: 5px;
   font-size: 16px;
 }
+
 div.wellbeingFooter div:nth-of-type(3) {
   grid-column: 4;
 }
+
 div.wellbeingFooter svg {
   display: block;
   margin: auto;
-  height:50px;
-  width:50px;
+  height: 50px;
+  width: 50px;
 }
+
 div.wellbeingFooter div.overlapMiniBubble div {
   position: absolute;
 }
+
 div.wellbeingFooter div.overlapMiniBubble div span {
   position: relative;
   top: -53px;

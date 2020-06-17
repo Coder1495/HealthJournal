@@ -21,97 +21,97 @@
 // to present the latest data as a start...
 //
 export const statsViewData = {
-  Date : (new Date()),
-  PatientID : 'A123123',
+  Date: (new Date()),
+  PatientID: 'A123123',
   City: 'Los Angeles',
   State: 'CA',
   WellbeingIndex: 94,
   YesterdayWellbeingIndex: 52,
   TomorrowWellbeingIndex: 95,
   EnvironmentalQualityIndex: 88,
-  panels : [
+  panels: [
     {
-      title : 'Wellbeing & Environmental Index',
-      highlightLabel : '',
-      highlightMeasure : '',
-      measures : [
+      title: 'Wellbeing & Environmental Index',
+      highlightLabel: '',
+      highlightMeasure: '',
+      measures: [
         {
-          title : 'Wellbeing',
-          twoWeeksData : [ 44, 30, 45, 44, 48, 52, 50, 49, 49, 55, 52, 51, 53, 52 ]
+          title: 'Wellbeing',
+          twoWeeksData: [44, 30, 45, 44, 48, 52, 50, 49, 49, 55, 52, 51, 53, 52]
         },
         {
-          title : 'QoL',
-          twoWeeksData : [ 54, 43, 45, 52, 51, 55, 56, 59, 54, 55, 58, 61, 63, 62 ]
-        } 
+          title: 'QoL',
+          twoWeeksData: [54, 43, 45, 52, 51, 55, 56, 59, 54, 55, 58, 61, 63, 62]
+        }
       ]
     },
     {
-      title : 'Physiology',
-      highlightLabel : '',
-      highlightMeasure : '',
-      measures : [
+      title: 'Physiology',
+      highlightLabel: '',
+      highlightMeasure: '',
+      measures: [
         {
-          title : 'Heart Rate',
-          twoWeeksData : [ 44, 44, 48, 52, 50, 49, 49, 55, 52, 51, 53, 52, 30, 45 ]
+          title: 'Heart Rate',
+          twoWeeksData: [44, 44, 48, 52, 50, 49, 49, 55, 52, 51, 53, 52, 30, 45]
         },
         {
-          title : 'Stress',
-          twoWeeksData : [ 54, 43, 45, 52, 51, 55, 56, 59, 54, 55, 58, 61, 63, 67 ]
-        }, 
-        {
-          title : 'Sleep',
-          twoWeeksData : [ 50, 49, 49, 55, 52, 51, 53, 44, 30, 45, 44, 48, 52, 52 ]
+          title: 'Stress',
+          twoWeeksData: [54, 43, 45, 52, 51, 55, 56, 59, 54, 55, 58, 61, 63, 67]
         },
         {
-          title : 'Oxygen',
-          twoWeeksData : [ 56, 59, 54, 55, 54, 43, 45, 52, 51, 55,  58, 61, 63, 62 ]
-        } 
+          title: 'Sleep',
+          twoWeeksData: [50, 49, 49, 55, 52, 51, 53, 44, 30, 45, 44, 48, 52, 52]
+        },
+        {
+          title: 'Oxygen',
+          twoWeeksData: [56, 59, 54, 55, 54, 43, 45, 52, 51, 55, 58, 61, 63, 62]
+        }
       ]
     },
     {
-      title : 'Activities',
-      highlightLabel : '',
-      highlightMeasure : '',
-      measures : [
+      title: 'Activities',
+      highlightLabel: '',
+      highlightMeasure: '',
+      measures: [
         {
-          title : 'Exercise',
-          twoWeeksData : [ 41, 44, 46, 52, 50, 49, 49, 55, 52, 51, 53, 52, 30, 40 ]
+          title: 'Exercise',
+          twoWeeksData: [41, 44, 46, 52, 50, 49, 49, 55, 52, 51, 53, 52, 30, 40]
         },
         {
-          title : 'Energy',
-          twoWeeksData : [ 54, 43, 45, 52, 51, 55, 56, 59, 54, 55, 58, 61, 63, 60 ]
-        }, 
-        {
-          title : 'Calories',
-          twoWeeksData : [ 50, 49, 49, 55, 52, 51, 53, 44, 30, 45, 44, 48, 52, 55 ]
+          title: 'Energy',
+          twoWeeksData: [54, 43, 45, 52, 51, 55, 56, 59, 54, 55, 58, 61, 63, 60]
         },
         {
-          title : 'Social',
-          twoWeeksData : [ 56, 59, 54, 55, 54, 43, 45, 52, 51, 55,  58, 61, 63, 59 ]
-        } 
+          title: 'Calories',
+          twoWeeksData: [50, 49, 49, 55, 52, 51, 53, 44, 30, 45, 44, 48, 52, 55]
+        },
+        {
+          title: 'Social',
+          twoWeeksData: [56, 59, 54, 55, 54, 43, 45, 52, 51, 55, 58, 61, 63, 59]
+        }
       ]
     },
     {
-      title : 'Environment',
-      highlightLabel : '',
-      highlightMeasure : '',
-      measures : [
+      title: 'Environment',
+      highlightLabel: '',
+      highlightMeasure: '',
+      measures: [
         {
-          title : 'Air Quality',
-          twoWeeksData : [ 54, 43, 45, 52, 51, 55, 56, 59, 54, 55, 58, 61, 63, 62 ]
+          title: 'Air Quality',
+          twoWeeksData: [54, 43, 45, 52, 51, 55, 56, 59, 54, 55, 58, 61, 63, 62]
         },
         {
-          title : 'Temp.',
-          twoWeeksData : [ 44, 30, 45, 44, 48, 52, 50, 49, 49, 55, 52, 51, 53, 52 ]
-        }, 
-        {
-          title : 'Humidity',
-          twoWeeksData : [ 56, 59, 54, 55, 54, 43, 45, 52, 51, 55,  58, 61, 63, 62 ]
+          title: 'Temp.',
+          twoWeeksData: [44, 30, 45, 44, 48, 52, 50, 49, 49, 55, 52, 51, 53, 52]
         },
         {
-          title : 'Wind',
-          twoWeeksData : [ 50, 49, 49, 55, 52, 51, 53, 44, 30, 45, 44, 48, 52, 52 ]
-        } 
+          title: 'Humidity',
+          twoWeeksData: [56, 59, 54, 55, 54, 43, 45, 52, 51, 55, 58, 61, 63, 62]
+        },
+        {
+          title: 'Wind',
+          twoWeeksData: [50, 49, 49, 55, 52, 51, 53, 44, 30, 45, 44, 48, 52, 52]
+        }
       ]
-    }  ]
+    }]
 }

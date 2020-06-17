@@ -10,14 +10,14 @@ import {RegisterPage} from '../../register/register.page';
 import {GoogleComponent} from '../../google/google.component';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        IonicModule,
-        TabsPageRoutingModule
-    ],
-    declarations: [TabsPage],
-    providers: [LoginComponent, RegisterPage, GoogleComponent]
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    TabsPageRoutingModule
+  ],
+  declarations: [TabsPage],
+  providers: [LoginComponent, RegisterPage, GoogleComponent]
 })
 export class TabsPageModule {
 }

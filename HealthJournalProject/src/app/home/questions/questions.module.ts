@@ -12,16 +12,16 @@ import {CancerComponent} from '../../cancer/cancer.component';
 import {RatingComponent} from './rating/rating.component';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        IonicModule,
-        IonicRatingModule,
-        AngularFireDatabaseModule,
-        RouterModule.forChild([{path: '', component: QuestionsPage}])
-    ],
-    declarations: [QuestionsPage, RatingComponent],
-    providers: [CardiovascularComponent, CancerComponent]
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    IonicRatingModule,
+    AngularFireDatabaseModule,
+    RouterModule.forChild([{path: '', component: QuestionsPage}])
+  ],
+  declarations: [QuestionsPage, RatingComponent],
+  providers: [CardiovascularComponent, CancerComponent]
 })
 export class QuestionsPageModule {
 }

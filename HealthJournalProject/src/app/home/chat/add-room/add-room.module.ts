@@ -9,13 +9,13 @@ import {AddRoomPageRoutingModule} from './add-room-routing.module';
 import {AddRoomPage} from './add-room.page';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        IonicModule,
-        AddRoomPageRoutingModule
-    ],
-    declarations: [AddRoomPage]
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    AddRoomPageRoutingModule
+  ],
+  declarations: [AddRoomPage]
 })
 export class AddRoomPageModule {
 }

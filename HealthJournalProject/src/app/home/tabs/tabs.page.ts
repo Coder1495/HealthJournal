@@ -6,43 +6,43 @@ import {GoogleComponent} from '../../google/google.component';
 import {AngularFireAuth} from '@angular/fire/auth';
 
 @Component({
-    selector: 'app-tabs',
-    templateUrl: './tabs.page.html',
-    styleUrls: ['./tabs.page.scss'],
+  selector: 'app-tabs',
+  templateUrl: './tabs.page.html',
+  styleUrls: ['./tabs.page.scss'],
 })
 export class TabsPage implements OnInit {
 
-    logo = '../../../assets/logo.png';
+  logo = '../../../assets/logo.png';
 
-    constructor(
-        public Uauth: AuthService,
-        public afAuth: AngularFireAuth,
-        public ln: LoginComponent,
-        public rg: RegisterPage,
-        public gp: GoogleComponent
-    ) {
-    }
+  constructor(
+    public Uauth: AuthService,
+    public afAuth: AngularFireAuth,
+    public ln: LoginComponent,
+    public rg: RegisterPage,
+    public gp: GoogleComponent
+  ) {
+  }
 
-    ngOnInit() {
-    }
+  ngOnInit() {
+  }
 
 //  unreadSmsCount() {
 //    const SmsCount = 0;
-    //   const conversationList = 'true';
-    //   if ( conversationList ) {
-    //    for (let i = 0; i < conversationList.length; i++) {
-    //      SmsCount += conversationList[i].messages.length - conversationsInfo[i].messagesRead;
-    //      if (SmsCount === 0) {
-    //        SmsCount = null;
-    //      }
-    //  }
-    // }
-    // getUnreadMessagesCount() {
-    //  if (this.unreadMessagesCount) {
-    //    if (this.unreadMessagesCount > 0) {
-    //      return this.unreadMessagesCount;
-    //    }
-    //  }
-    //   return null;
-    // }
+  //   const conversationList = 'true';
+  //   if ( conversationList ) {
+  //    for (let i = 0; i < conversationList.length; i++) {
+  //      SmsCount += conversationList[i].messages.length - conversationsInfo[i].messagesRead;
+  //      if (SmsCount === 0) {
+  //        SmsCount = null;
+  //      }
+  //  }
+  // }
+  // getUnreadMessagesCount() {
+  //  if (this.unreadMessagesCount) {
+  //    if (this.unreadMessagesCount > 0) {
+  //      return this.unreadMessagesCount;
+  //    }
+  //  }
+  //   return null;
+  // }
 }

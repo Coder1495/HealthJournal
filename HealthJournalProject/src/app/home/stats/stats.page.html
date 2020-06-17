@@ -12,10 +12,10 @@
     <h4>Wellbeing Index</h4>
 
     <div class="overlap">
-      <ion-img 
-        class="dial" 
-        [src]="coloredDial"
-        [ngStyle]="dialRotation"
+      <ion-img
+          class="dial"
+          [src]="coloredDial"
+          [ngStyle]="dialRotation"
       >
       </ion-img>
       <ion-img class="wheel" [src]="wheel"></ion-img>
@@ -25,51 +25,51 @@
     <div class="wellbeingFooter">
       <div class="overlapMiniBubble">
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
-        [ngClass]="yesterdayClass">
+             [ngClass]="yesterdayClass">
           <circle cx="50" cy="50" r="50"/>
         </svg>
         <span class="smallerText">Yesterday</span><br/>
         <div><span [ngClass]="yesterdayTextColor">{{yesterdayIndex}}%</span></div>
-      </div>    
-    
+      </div>
+
       <div>
         {{this.wellbeingQual}}
-      </div> 
+      </div>
 
       <div class="overlapMiniBubble">
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
-          [ngClass]="tomorrowClass"> 
+             [ngClass]="tomorrowClass">
           <circle cx="50" cy="50" r="50"/>
         </svg>
         <span class="smallerText">Tomorrow (est.)</span><br/>
         <div><span [ngClass]="tomorrowTextColor">{{tomorrowIndex}}%</span></div>
-      </div>    
-  </div>
+      </div>
+    </div>
 
-  <h4>Environmental Quality Index</h4>
+    <h4>Environmental Quality Index</h4>
 
-  <div class="overlapEnvironment">
-    <ion-img 
-      class="temperature" 
-      [src]="temperatureLegend"
-      [ngStyle]="temperatureShift"
+    <div class="overlapEnvironment">
+      <ion-img
+          class="temperature"
+          [src]="temperatureLegend"
+          [ngStyle]="temperatureShift"
+      >
+      </ion-img>
+      <ion-img class="bar" [src]="bar"></ion-img>
+      <div [ngStyle]="temperatureShift" [ngClass]="environmentalTextColor">{{environmentalQualityIndex}}%</div>
+    </div>
+    <div class="environmentalQual">{{environmentalQual}}</div>
+    <div class='space-10'></div>
+
+    <app-panel *ngFor="let panel of panels; let i = index"
+               [panel]="panels[i]"
+               ([open])="isOpen[i]"
+               (click)="alert"
     >
-    </ion-img>
-    <ion-img class="bar" [src]="bar"></ion-img>
-    <div [ngStyle]="temperatureShift" [ngClass]="environmentalTextColor">{{environmentalQualityIndex}}%</div>
+    </app-panel>
+
+
+    <div class='space-10'></div>
+
   </div>
-  <div class="environmentalQual">{{environmentalQual}}</div>
-  <div class='space-10'></div>
-
-  <app-panel *ngFor="let panel of panels; let i = index"
-    [panel]="panels[i]" 
-    ([open])="isOpen[i]"
-    (click) = "alert"
-  >
-  </app-panel>
-
-
-  <div class='space-10'></div>
-
-</div>
 </ion-content>

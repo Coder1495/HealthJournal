@@ -31,34 +31,34 @@ import {FCM} from '@ionic-native/fcm/ngx';
 import {GooglePlus} from '@ionic-native/google-plus/ngx';
 
 @NgModule({
-    declarations: [AppComponent],
-    entryComponents: [],
-    imports: [
-        CommonModule,
-        BrowserModule,
-        BrowserAnimationsModule,
-        IonicModule.forRoot(),
-        FormsModule,
-        ReactiveFormsModule,
-        AppRoutingModule,
-        HttpClientModule,
-        AngularFireModule.initializeApp(firebaseConfig),
-        AngularFireAuthModule,
-        AngularFirestoreModule,
-        AngularFireStorageModule,
-        AngularFireDatabaseModule
-    ],
-    providers: [
-        StatusBar,
-        SplashScreen,
-        {provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
-        UserService,
-        AuthService,
-        Geolocation,
-        FCM,
-        GooglePlus
-    ],
-    bootstrap: [AppComponent]
+  declarations: [AppComponent],
+  entryComponents: [],
+  imports: [
+    CommonModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    IonicModule.forRoot(),
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireDatabaseModule
+  ],
+  providers: [
+    StatusBar,
+    SplashScreen,
+    {provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
+    UserService,
+    AuthService,
+    Geolocation,
+    FCM,
+    GooglePlus
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }

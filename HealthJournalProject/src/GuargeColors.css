@@ -8,17 +8,21 @@
 // NOTE: 'fill' used to color svg elements.
 */
 .GuageColor0 {
-  fill: #C21818;
+    fill: #C21818;
 }
+
 .GuageColor1 {
-  fill: #F48722;
+    fill: #F48722;
 }
+
 .GuageColor2 {
-  fill: #F0DB20;
+    fill: #F0DB20;
 }
+
 .GuageColor3 {
-  fill: #86C03B;
+    fill: #86C03B;
 }
+
 .GuageColor4 {
-  fill: #0D760D;
+    fill: #0D760D;
 }

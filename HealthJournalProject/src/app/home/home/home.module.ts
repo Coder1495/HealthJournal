@@ -8,14 +8,14 @@ import {HomePage} from './home.page';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        IonicModule,
-        AngularFireDatabaseModule,
-        RouterModule.forChild([{path: '', component: HomePage}])
-    ],
-    declarations: [HomePage]
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    AngularFireDatabaseModule,
+    RouterModule.forChild([{path: '', component: HomePage}])
+  ],
+  declarations: [HomePage]
 })
 export class HomePageModule {
 }

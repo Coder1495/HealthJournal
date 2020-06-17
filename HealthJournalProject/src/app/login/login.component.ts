@@ -9,49 +9,49 @@ import {AngularFirestore} from '@angular/fire/firestore';
 import {AuthService} from '../auth.service';
 
 @Component({
-    selector: 'app-login',
-    templateUrl: './login.component.html',
-    styleUrls: ['./login.component.scss'],
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
 
-    email: any = '';
-    password: string = null;
-    logo = '../../../assets/logo.png';
+  email: any = '';
+  password: string = null;
+  logo = '../../../assets/logo.png';
 
-    constructor(public afAuth: AngularFireAuth,
-                public afStore: AngularFirestore,
-                public alert: AlertController,
-                public user: UserService,
-                public auth: AuthService,
-                public router: Router) {
-    }
+  constructor(public afAuth: AngularFireAuth,
+              public afStore: AngularFirestore,
+              public alert: AlertController,
+              public user: UserService,
+              public auth: AuthService,
+              public router: Router) {
+  }
 
-    ngOnInit() {
-    }
+  ngOnInit() {
+  }
 
-    async login() {
-        const {email, password} = this;
-        try {
-            await this.afAuth.auth.signInWithEmailAndPassword(email, password);
-        } catch (error) {
-            console.dir(error);
-            this.showAlert('Error', error.message);
-            // tslint:disable-next-line: triple-equals
-            if (error.code === 'auth/user-not-found') {
-                console.log('User not found');
-                this.showAlert('Error', error.message);
-            }
-        }
+  async login() {
+    const {email, password} = this;
+    try {
+      await this.afAuth.auth.signInWithEmailAndPassword(email, password);
+    } catch (error) {
+      console.dir(error);
+      this.showAlert('Error', error.message);
+      // tslint:disable-next-line: triple-equals
+      if (error.code === 'auth/user-not-found') {
+        console.log('User not found');
+        this.showAlert('Error', error.message);
+      }
     }
+  }
 
-    async showAlert(header: string, message: string) {
-        const alert = this.alert.create({
-            header,
-            message,
-            buttons: ['OK']
-        });
-        await (await alert).present();
-    }
+  async showAlert(header: string, message: string) {
+    const alert = this.alert.create({
+      header,
+      message,
+      buttons: ['OK']
+    });
+    await (await alert).present();
+  }
 
 }

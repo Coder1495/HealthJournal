@@ -1,47 +1,47 @@
 <div class="btn">
-    <ion-row row-1>
-        <ion-col>
-            <ion-row>
-                <ion-button size="small" shape="round" [disabled]="isDisabled"
-                            [color]="ratingSelected==0?'dark':'light'"
-                            (click)="OnClickAction(0)">0
-                </ion-button>&nbsp;&nbsp;&nbsp;
-            </ion-row>
-            <ion-row>
-                <ion-text style="font-size: smaller; color:green; padding-top:10px;">Low</ion-text>&nbsp;&nbsp;&nbsp;
-            </ion-row>
-        </ion-col>
-        <ion-col>
-            <ion-button size="small" shape="round" [disabled]="isDisabled" [color]="ratingSelected==1?'dark':'light'"
-                        (click)="OnClickAction(1)">1
-            </ion-button>
-        </ion-col>
-        <ion-col>
-            <ion-button size="small" shape="round" [disabled]="isDisabled" [color]="ratingSelected==2?'dark':'light'"
-                        (click)="OnClickAction(2)">2
-            </ion-button>&nbsp;&nbsp;&nbsp;
-        </ion-col>
-        <ion-col>
-            <ion-button size="small" shape="round" [disabled]="isDisabled" [color]="ratingSelected==3?'dark':'light'"
-                        (click)="OnClickAction(3)">3
-            </ion-button>&nbsp;&nbsp;&nbsp;
-        </ion-col>
-        <ion-col>
-            <ion-button size="small" shape="round" [disabled]="isDisabled" [color]="ratingSelected==4?'dark':'light'"
-                        (click)="OnClickAction(4)">4
-            </ion-button>&nbsp;&nbsp;&nbsp;
-        </ion-col>
-        <ion-col>
-            <ion-row>
-                <ion-button size="small" shape="round" [disabled]="isDisabled"
-                            [color]="ratingSelected==5?'dark':'light'"
-                            (click)="OnClickAction(5)">5
-                </ion-button>
-            </ion-row>
-            &nbsp;&nbsp;<ion-row>
-            <ion-text style="font-size: smaller; color:red; padding-top:10px;">High</ion-text>
-        </ion-row>
-        </ion-col>
+  <ion-row row-1>
+    <ion-col>
+      <ion-row>
+        <ion-button size="small" shape="round" [disabled]="isDisabled"
+                    [color]="ratingSelected==0?'dark':'light'"
+                    (click)="OnClickAction(0)">0
+        </ion-button>&nbsp;&nbsp;&nbsp;
+      </ion-row>
+      <ion-row>
+        <ion-text style="font-size: smaller; color:green; padding-top:10px;">Low</ion-text>&nbsp;&nbsp;&nbsp;
+      </ion-row>
+    </ion-col>
+    <ion-col>
+      <ion-button size="small" shape="round" [disabled]="isDisabled" [color]="ratingSelected==1?'dark':'light'"
+                  (click)="OnClickAction(1)">1
+      </ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button size="small" shape="round" [disabled]="isDisabled" [color]="ratingSelected==2?'dark':'light'"
+                  (click)="OnClickAction(2)">2
+      </ion-button>&nbsp;&nbsp;&nbsp;
+    </ion-col>
+    <ion-col>
+      <ion-button size="small" shape="round" [disabled]="isDisabled" [color]="ratingSelected==3?'dark':'light'"
+                  (click)="OnClickAction(3)">3
+      </ion-button>&nbsp;&nbsp;&nbsp;
+    </ion-col>
+    <ion-col>
+      <ion-button size="small" shape="round" [disabled]="isDisabled" [color]="ratingSelected==4?'dark':'light'"
+                  (click)="OnClickAction(4)">4
+      </ion-button>&nbsp;&nbsp;&nbsp;
+    </ion-col>
+    <ion-col>
+      <ion-row>
+        <ion-button size="small" shape="round" [disabled]="isDisabled"
+                    [color]="ratingSelected==5?'dark':'light'"
+                    (click)="OnClickAction(5)">5
+        </ion-button>
+      </ion-row>
+      &nbsp;&nbsp;<ion-row>
+      <ion-text style="font-size: smaller; color:red; padding-top:10px;">High</ion-text>
     </ion-row>
+    </ion-col>
+  </ion-row>
 </div>
 <br><br>
