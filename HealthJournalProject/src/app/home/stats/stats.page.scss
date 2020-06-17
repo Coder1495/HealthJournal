@@ -3,6 +3,12 @@ ion-title.background {
   background-color: rgb(95, 95, 95); // url('../../../assets/20091.jpg');
 }
 
+ion-title ion-label {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
 h4 {
   color: #170957;
   margin: 0px;

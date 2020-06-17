@@ -1,11 +1,10 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title class="background">
-      <h5>Stats</h5>
-    </ion-title>
-  </ion-toolbar>
+  <ion-title class="background">
+    <h5>
+      <ion-label>{{(Profile |async)?.city}}</ion-label>
+    </h5>
+  </ion-title>
 </ion-header>
-
 
 <ion-content>
   <div class='page-padding'>

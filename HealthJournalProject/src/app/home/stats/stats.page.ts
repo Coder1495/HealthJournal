@@ -1,3 +1,10 @@
+import {ProfileElement, ProfileService} from '../../profile.service';
+import {SurveyElement, SurveyService} from '../../survey.service';
+import {AuthService} from '../../auth.service';
+import {AngularFireAuth} from '@angular/fire/auth';
+import {Observable} from 'rxjs';
+import * as firebase from 'Firebase';
+
 import { Component, ViewChild, OnInit } from '@angular/core';
 import { statsViewData } from './sample';
 
@@ -19,6 +26,10 @@ const qualitativeScale = ["Very Bad","Bad","Neutral","Good","Very Good"];
 })
 export class StatsPage implements OnInit {
   @ViewChild('lineCanvas', { static: false }) lineCanvas;
+  
+  Profile: Observable<ProfileElement>;
+  public uid;
+  Survey: Observable<SurveyElement>;
 
   assetPath = '../../../assets/chart/';
   wheel: any = '../../../assets/chart/numberedwheel.svg';
@@ -64,10 +75,26 @@ export class StatsPage implements OnInit {
   panels = this.stats.panels as Array<object>;
   isOpen = Array(this.panels.length).map(item=>false);
 
-  constructor() {
+  constructor(
+    private proService: ProfileService,
+    private survService: SurveyService,
+    public afAuth: AngularFireAuth,
+    private auth: AuthService
+  ) {
+    this.uid = this.auth.cUid;
+    
+    firebase.database().ref('Environment/Airquality')
+    .orderByKey().limitToLast(3)
+    .on('value', resp => {
+      console.log(`FIREBASE: ${ JSON.stringify(resp) }`);
+    });
   }
 
   ngOnInit() {
+    this.Profile = this.proService.pro(this.uid);    
+    this.Profile.subscribe(profile=>console.log(profile));
+    this.Survey = this.survService.surv('2020-06-15'); // TODO: Today's date formula
+    this.Survey.subscribe(surv=>console.log(surv));
   }
 
 }
